@@ -14,7 +14,7 @@ class MyApp(QWidget):
         self.setWindowTitle('My First Application') #타이틀바에 나타나는 창의 제목을 설정
         self.move(300, 300) #스크린에서 위젯을 해당 위치로 이동시킴 (x,y)
         self.resize(400, 200) #위젯의 크기를 설정 (너비, 높이)
-        self.show() #위젯을 스크린에 표
+        self.show() #위젯을 스크린에 표시 
 
 
 if __name__ == '__main__':
