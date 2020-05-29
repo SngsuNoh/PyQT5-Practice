@@ -4,6 +4,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, qApp
 from PyQt5.QtGui import QIcon
 #메뉴는 어플리케이션에서 사용되는 모든 명령의 모음, 툴바는 자주 사용하는 명령들을 더 편하게 사용하도록 한다.
+#메뉴가 있는데 굳이 필요한가 싶지만 당장 pycharm UI를 보니 툴바가 있으면 좋을 것 같기도 하다.
 
 #간단한 툴바를 생성한다. 툴바에는 선택되었을 때에 애플리케이션을 종료하는 exitAction이 포함되었다.
 class MyApp(QMainWindow):

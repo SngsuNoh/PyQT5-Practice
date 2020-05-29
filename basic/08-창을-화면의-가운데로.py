@@ -3,6 +3,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDesktopWidget
 #창을 화면 가운데에 띄워보도록 하자.
+#10번 파일에서 언급하겠으나 굳이 이 과정 없이도 위치를 설정하지 않으면 default로 화면 중앙에 창이 띄워지는 듯 하다.
 
 class MyApp(QWidget):
 

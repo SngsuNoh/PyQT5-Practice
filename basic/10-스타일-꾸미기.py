@@ -21,6 +21,8 @@ class MyApp(QWidget):
         testLabel = QLabel(self.date.toString('yyyy년 M월 d일 ddd요일'))
         #QLabel 클래스를 통해 3개의 라벨을 만들고 텍스트를 설정해준다.
         #09에서 배운 날짜 표기를 연습하기 위해 날짜를 표시하는 testLabel도 만들어봤다.
+        #QLabel은 곧 만들어질 widget 폴더에서 자세히 다루어보도록 하자
+
 
         lbl_red.setStyleSheet("color: red;" #글자색 
                              "border-style: solid;" #경계선 (solid: 실선)
@@ -49,7 +51,7 @@ class MyApp(QWidget):
 
         self.setWindowTitle('Stylesheet')
         self.resize(self.sizeHint())
-        #창 크기만 설정하고 위치 설정은 안했는데 화면 중앙으로 가는 걸 보니 default인 것 같다 그럼 08번 예제는 왜한거지? ㅋㅋ
+        #창 크기만 설정하고 위치 설정은 안했는데 화면 중앙으로 가는 걸 보니 default인 것 같다. 지식이 늘었다!
         self.show()
 
 
