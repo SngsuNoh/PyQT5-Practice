@@ -17,7 +17,7 @@ class MyApp(QWidget):
         #center() 메소드를 통해 창이 화면의 가운데에 위치하게 된다.
         self.show()
 
-    def center(self):
+    def center(self): #center() 메소드를 구현해보자
         qr = self.frameGeometry()
         #frameGeometry() 메소드를 통해 창의 위치와 크기 정보를 가져오도록 하자
         cp = QDesktopWidget().availableGeometry().center()
