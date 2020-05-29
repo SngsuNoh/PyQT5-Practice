@@ -38,7 +38,7 @@ class MyApp(QWidget):
 
         self.setLayout(vbox)
 
-        self.setWindowTitle('Box Layout')
+        self.setWindowTitle('Box layout')
         self.setGeometry(300, 300, 300, 200)
         self.show()
 
