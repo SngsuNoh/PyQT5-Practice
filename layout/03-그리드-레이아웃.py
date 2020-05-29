@@ -4,7 +4,7 @@
 
 
 import sys
-from PyQt5.QtWidgets import (QApplication, QWidget, QGridLayout, QLabel, QLineEdit, QTextEdit)
+from PyQt5.QtWidgets import (QApplication, QWidget, QGridLayout, QLabel, QLineEdit, QTextEdit, QPushButton)
 from PyQt5.QtCore import QDateTime
 #그리드 레이아웃은 QGridLayout() 메소드를 사용해 생성한다.
 
@@ -24,10 +24,12 @@ class MyApp(QWidget):
         dateLabel = QLabel(self.date.toString('yyyy년 M월 d일 ddd요일'))
         #맨 아래에 날짜를 표시하고 싶어졌다.
 
+
         grid.addWidget(QLabel('Title:'), 0, 0)
         grid.addWidget(QLabel('Author:'), 1, 0)
         grid.addWidget(QLabel('Review:'), 2, 0)
         grid.addWidget(QLabel('Date'), 3, 0)
+        grid.addWidget(QPushButton('Submit', self), 4, 1) #제출버튼이 있으면 좋을 것 같다.
         #addWidget(추가할 위젯, 행번호, 열번호)
         #세 라벨을 첫 번째 열에 수직으로 배치하는것이다.
 
