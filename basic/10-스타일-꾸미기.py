@@ -2,12 +2,15 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
-
+from PyQt5.QtCore import QDateTime
+#setStyleSheet()을 이용하면 어플리케이션 구성 요소들의 스타일을 꾸밀 수 있다.
+#대충 보니 웹프로그래밍의 css 느낌이 난다.
 
 class MyApp(QWidget):
 
     def __init__(self):
         super().__init__()
+        self.date = QDateTime.currentDateTime()
         self.initUI()
 
     def initUI(self):
@@ -15,24 +18,30 @@ class MyApp(QWidget):
         lbl_red = QLabel('Red')
         lbl_green = QLabel('Green')
         lbl_blue = QLabel('Blue')
+        testLabel = QLabel(self.date.toString('yyyy년 M월 d일 ddd요일'))
+        #QLabel 클래스를 통해 3개의 라벨을 만들고 텍스트를 설정해준다.
+        #09에서 배운 날짜 표기를 연습하기 위해 날짜를 표시하는 testLabel도 만들어봤다.
 
-        lbl_red.setStyleSheet("color: red;"
-                             "border-style: solid;"
+        lbl_red.setStyleSheet("color: red;" #글자색 
+                             "border-style: solid;" #경계선 (solid: 실선)
                              "border-width: 2px;"
                              "border-color: #FA8072;"
-                             "border-radius: 3px")
+                             "border-radius: 3px") #경계선 모서리
         lbl_green.setStyleSheet("color: green;"
-                               "background-color: #7FFFD4")
+                               "background-color: #7FFFD4") #배경색
         lbl_blue.setStyleSheet("color: blue;"
                               "background-color: #87CEFA;"
-                              "border-style: dashed;"
+                              "border-style: dashed;" #대쉬 스타일 경계선 
                               "border-width: 3px;"
                               "border-color: #1E90FF")
+        testLabel.setStyleSheet("color: white;"
+                                "background-color: #cee5d5") #cee5d5는 민트색이다.
 
         vbox = QVBoxLayout()
         vbox.addWidget(lbl_red)
         vbox.addWidget(lbl_green)
         vbox.addWidget(lbl_blue)
+        vbox.addWidget(testLabel)
 
         self.setLayout(vbox)
 
