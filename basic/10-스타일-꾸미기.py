@@ -1,7 +1,7 @@
 ## Ex 3-10. 스타일 꾸미기.
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QHBoxLayout
 from PyQt5.QtCore import QDateTime
 #setStyleSheet()을 이용하면 어플리케이션 구성 요소들의 스타일을 꾸밀 수 있다.
 #대충 보니 웹프로그래밍의 css 느낌이 난다.
@@ -38,6 +38,8 @@ class MyApp(QWidget):
                                 "background-color: #cee5d5") #cee5d5는 민트색이다.
 
         vbox = QVBoxLayout()
+        #수직박스레이아웃(QVBoxLayout())을 이용해 라벨들을 수직으로 배치해보자
+        #한편 수평으로 라벨들을 배치하려면 QHBoxLayout()을 사용하면 된다.
         vbox.addWidget(lbl_red)
         vbox.addWidget(lbl_green)
         vbox.addWidget(lbl_blue)
@@ -46,7 +48,8 @@ class MyApp(QWidget):
         self.setLayout(vbox)
 
         self.setWindowTitle('Stylesheet')
-        self.setGeometry(300, 300, 300, 200)
+        self.resize(self.sizeHint())
+        #창 크기만 설정하고 위치 설정은 안했는데 화면 중앙으로 가는 걸 보니 default인 것 같다 그럼 08번 예제는 왜한거지? ㅋㅋ
         self.show()
 
 
