@@ -4,7 +4,7 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QRadioButton
-#참고로 한 위젯 안에 여러 버튼 그룹을 배치하고 싶다면 QButtonGroup()을 사용한다.
+#참고로 한 위젯 안에 여러 버튼 그룹을 배치하고 싶다면 QButtonGroup()을 사용한다. 04-2 파일에서 다루어보도록 하자.
 #http://doc.qt.io/qt-5/qbuttongroup.html
 
 class MyApp(QWidget):
