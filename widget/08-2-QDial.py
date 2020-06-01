@@ -1,4 +1,6 @@
-## Ex 5-8. QSlider & QDial.
+## Ex 5-8. QDial.
+#QDial은 슬라이더를 둥글게 표현한 다이얼 위젯이며 슬라이더와 같은 시그널, 슬롯, 메소드들을 공유한다.
+#https://doc.qt.io/qt-5/qdial.html
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDial, QPushButton

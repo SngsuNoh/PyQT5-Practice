@@ -1,6 +1,6 @@
 ## Ex 5-7. QProgressBar.
 #Progress Bar(진행 표시줄) 은 시간이 걸리는 작업에 사용하는 위젯이다.
-#QProgressBar은 수평/수직의 진행 표시줄을 제공하며 범위(최솟값과 최대값) 을 설정할 수 있다.
+#QProgressBar은 수평, 수직의 진행 표시줄을 제공하며 범위(최솟값과 최대값) 을 설정할 수 있다.
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QProgressBar

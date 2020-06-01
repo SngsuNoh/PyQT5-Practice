@@ -1,4 +1,4 @@
-## Ex 5-8. QSlider & QDial.
+## Ex 5-8. QSlider
 #QSlider는 수평 또는 수직 방향의 슬라이더를 제공한다.
 #https://doc.qt.io/qt-5/qslider.html
 
