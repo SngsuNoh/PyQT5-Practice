@@ -16,11 +16,16 @@ class MyApp(QWidget):
     def initUI(self):
         self.pbar = QProgressBar(self)
         #진행 표시줄을 하나 생성한다.
-        self.pbar.setGeometry(30, 40, 200, 25)
+        self.pbar.setGeometry(40, 40, 200, 25)
 
         self.btn = QPushButton('Start', self)
         self.btn.move(40, 80)
         self.btn.clicked.connect(self.doAction)
+
+        self.btn2 = QPushButton('Reset', self)
+        self.btn2.move(120, 80)
+        self.btn2.clicked.connect(self.reset)
+        #누르면 진행하던 작업과 함께 진행 표시줄을 초기화한다.
 
         self.timer = QBasicTimer()
         #진행 표시줄을 활성화하기 위한 타이머 객체를 생성한다.
@@ -46,9 +51,15 @@ class MyApp(QWidget):
             self.timer.stop()
             self.btn.setText('Start')
         else:
-            self.timer.start(100, self)
+            self.timer.start(30, self)
             #(종료시간, 이벤트가 수행될 객체)
             self.btn.setText('Stop')
+
+    def reset(self): #타이머를 멈추고 진행 중이던 작업을 초기화하는 reset 메소드이다.
+        self.timer.stop()
+        self.step = 0
+        self.pbar.setValue(self.step)
+        self.btn.setText('Start')
 
 
 if __name__ == '__main__':
