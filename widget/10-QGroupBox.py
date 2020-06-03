@@ -27,25 +27,26 @@ class MyApp(QWidget):
         self.setGeometry(300, 300, 480, 320)
         self.show()
 
-    def createFirstExclusiveGroup(self):
+    #아래는 각각의 GroupBox를 만드는 메소드들이다.
+    def createFirstExclusiveGroup(self): #배타적 라디오버튼의 그룹박스를 생성한다.
         groupbox = QGroupBox('Exclusive Radio Buttons')
 
         radio1 = QRadioButton('Radio1')
         radio2 = QRadioButton('Radio2')
-        radio3 = QRadioButton('Radio3')
-        radio1.setChecked(True)
+        radio3 = QRadioButton('Radio3') #라디오 버튼 세 개를 만든다.
+        radio1.setChecked(True) #1번 버튼이 기본적으로 체크되어 있도록 한다.
 
         vbox = QVBoxLayout()
         vbox.addWidget(radio1)
         vbox.addWidget(radio2)
         vbox.addWidget(radio3)
-        groupbox.setLayout(vbox)
+        groupbox.setLayout(vbox) #수직 박스 레이아웃으로 배치한다.
 
-        return groupbox
+        return groupbox #해당 그룹박스를 return한다.
 
-    def createSecondExclusiveGroup(self):
+    def createSecondExclusiveGroup(self): #3개의 라디오 버튼과 체크박스 하나를 가지는 그룹박스이다.
         groupbox = QGroupBox('Exclusive Radio Buttons')
-        groupbox.setCheckable(True)
+        groupbox.setCheckable(True) #그룹박스의 사용 여부를 선택할 수 있게 한다.
         groupbox.setChecked(False)
 
         radio1 = QRadioButton('Radio1')
@@ -65,14 +66,14 @@ class MyApp(QWidget):
 
         return groupbox
 
-    def createNonExclusiveGroup(self):
+    def createNonExclusiveGroup(self): #배타적이지 않은 체크박스들의 그룹박스이다.
         groupbox = QGroupBox('Non-Exclusive Checkboxes')
-        groupbox.setFlat(True)
+        groupbox.setFlat(True) #그룹박스를 평평하게 보이도록 한다.
 
         checkbox1 = QCheckBox('Checkbox1')
         checkbox2 = QCheckBox('Checkbox2')
         checkbox2.setChecked(True)
-        tristatebox = QCheckBox('Tri-state Button')
+        tristatebox = QCheckBox('Tri-state Button') #3개의 상태를 가지는 체크박스이다.
         tristatebox.setTristate(True)
 
         vbox = QVBoxLayout()
@@ -84,10 +85,10 @@ class MyApp(QWidget):
 
         return groupbox
 
-    def createPushButtonGroup(self):
+    def createPushButtonGroup(self): #Push버튼 여러 개를 갖는 그룹박스이다.
         groupbox = QGroupBox('Push Buttons')
         groupbox.setCheckable(True)
-        groupbox.setChecked(True)
+        groupbox.setChecked(True) #createSecondExclusiveGroup과 다르게 실행 시부터 그룹박스가 선택되어 있도록 한다.
 
         pushbutton = QPushButton('Normal Button')
         togglebutton = QPushButton('Toggle Button')
@@ -96,7 +97,7 @@ class MyApp(QWidget):
         flatbutton = QPushButton('Flat Button')
         flatbutton.setFlat(True)
         popupbutton = QPushButton('Popup Button')
-        menu = QMenu(self)
+        menu = QMenu(self) #이 버튼은 여러 개의 요소 중 하나를 선택할 수 있도록 해 주는 버튼이다.
         menu.addAction('First Item')
         menu.addAction('Second Item')
         menu.addAction('Third Item')
