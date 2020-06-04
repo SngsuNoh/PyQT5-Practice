@@ -30,7 +30,7 @@ class MyApp(QWidget):
         vbox.addWidget(lbl_img)
         vbox.addWidget(lbl_size)
         self.setLayout(vbox)
-        #수평 박스 레이아웃을 통해 이미지 라벨과 사이즈 표시 라벨을 정렬한다.
+        #수평 박스 레이아웃을 통해 이미지 라벨과 사이즈 표시 라벨을 정렬해 준다.
 
         self.setWindowTitle('QPixmap')
         self.move(300, 300)

@@ -39,7 +39,7 @@ class MyApp(QWidget):
 
     def showDate(self, date): #위에서 호출한 showDate 메소드이다.
         self.lbl.setText(date.toString())
-        #날짜를 클릭할 때마다 라벨의 텍스트가 선택된 날짜로 표시되도록 한다.
+        #날짜를 클릭할 때마다 라벨의 텍스트가 선택된 날짜로 표시되도록 해 준다.
 
 
 if __name__ == '__main__':
