@@ -14,12 +14,12 @@ class MyApp(QWidget):
 
     def initUI(self):
         QToolTip.setFont(QFont('SansSerif', 10))
-        self.setToolTip('This is a <b>QWidget</b> widget')
+        self.setToolTip('This is a <b>QWidget</b> 03-widget')
         #툴팁에 사용할 폰트를 설정한다. 여기서는 10px의 SansSerif를 사용함
         #setToolTip() 메소드를 사용해 툴팁에 표시될 텍스트를 설정한다.
 
         btn = QPushButton('Button', self)
-        btn.setToolTip('This is a <b>QPushButton</b> widget')
+        btn.setToolTip('This is a <b>QPushButton</b> 03-widget')
         # push 버튼을 하나 생성하고 툴팁을 달아준다.
         btn.move(50, 50)
         btn.resize(btn.sizeHint()) #sizeHint() 메소드는 버튼이 적절한 크기로 설정되도록 도와준다.

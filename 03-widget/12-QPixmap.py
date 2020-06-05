@@ -14,7 +14,7 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        pixmap = QPixmap('../basic/test.png')
+        pixmap = QPixmap('../01-basic/test.png')
         #담을 이미지를 선택하고 픽스맵 위젯을 생성한다.
         pixmap=pixmap.scaledToHeight(300)
         #픽스맵 위젯의 사이즈를 조절해준다. weight를 이용해 조절할 수도 있다.
