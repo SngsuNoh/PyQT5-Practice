@@ -6,7 +6,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout, QVBoxLayout
 #QHBoxLayout, QVBoxLayout은 여러 위젯을 수평, 수직으로 정렬하는 레이아웃 클래스이다.
 #두 클래스는 각각 박스를 하나 만드는데 안에는 또다른 박스나 위젯을 넣을 수 있다.
-#참고로 basic-10 파일에서 맛보기로 다루어본 바 있다.
+#참고로 01-basic-10 파일에서 맛보기로 다루어본 바 있다.
 
 
 class MyApp(QWidget):
@@ -38,7 +38,7 @@ class MyApp(QWidget):
 
         self.setLayout(vbox)
 
-        self.setWindowTitle('Box layout')
+        self.setWindowTitle('Box 02-layout')
         self.setGeometry(300, 300, 300, 200)
         self.show()
 
